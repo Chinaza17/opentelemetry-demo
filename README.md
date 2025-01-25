@@ -20,6 +20,9 @@ Create EC2 instance with the following configurations:
 T2.xlarge (More than 6GB ram required)
 15GB storage
 
+<img width="416" alt="image" src="https://github.com/user-attachments/assets/1156720c-b5c6-4a4e-b73b-9a19810c5eab" />
+
+
 
 Clone the repo:
 git clone <https://github.com/open-telemetry/opentelemetry-demo.git>
@@ -36,6 +39,7 @@ oThe networks section defines a custom network called opentelemetry-demo using t
 Services: 
 oEach service represents a different microservice in the application. These microservices work together to form a complete application.
 Service Details:
+<img width="416" alt="image" src="https://github.com/user-attachments/assets/b5c6a661-2050-443b-aad7-49f96b83b15a" />
 
 
 
@@ -70,6 +74,8 @@ Observability in Action:
 Dependencies: The depends_on condition ensures that services are started in the right order, crucial for a distributed system to function properly.
 We can also check how the OTEL variables are being passed as environment variables for the core demo and dependent services. The config files and the code for all these are in the /src folder. You can go ahead and look at how each service is instrumented considering the language and this documentation here helps us to better understand the instrumentation for each service in detail.
 Otel Collector
+<img width="416" alt="image" src="https://github.com/user-attachments/assets/4c204c58-f219-4f86-b5df-9440e165be30" />
+
 
 
 Receivers: Collect telemetry data (traces, metrics, logs) from various sources (e.g., applications, services, or endpoints).
@@ -154,9 +160,15 @@ echo \\
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
+<img width="415" alt="image" src="https://github.com/user-attachments/assets/0c30e738-e2c7-4be6-9dca-3fa7577c31bc" />
+
+
 Now start the application:
 sudo docker compose up --force-recreate --remove-orphans --detach
 • After a while all your containers should have been created and started.
+
+<img width="416" alt="image" src="https://github.com/user-attachments/assets/ef574958-8abd-49c7-b08f-646e7907acd6" />
+
 
 
 NOTE: If your kafka container is unhealthy, it means the RAM allocation wasn’t adequate to run the containers well, and if you are using 8 GB ram, you might have to run it several times before it will become healthy, if you are using less than 8GB ram, then you have to allocate more memory to your machine.
@@ -168,17 +180,27 @@ Once all the containers are started, we can now access them:
 Load Generator UI: http://IP:8080/loadgen/
 Jaeger UI: http://IP:8080/jaeger/ui/
 
+<img width="415" alt="image" src="https://github.com/user-attachments/assets/1b99d108-c32d-406d-b25f-5cfd50785c15" />
+<img width="415" alt="image" src="https://github.com/user-attachments/assets/a6ed5903-8bf4-4b1e-838d-a0698808bc7b" />
+<img width="415" alt="image" src="https://github.com/user-attachments/assets/3b7e8957-a2f2-48e7-9885-598de8b7ed49" />
+<img width="414" alt="image" src="https://github.com/user-attachments/assets/bd04fa68-e18a-4a7b-8604-80d7fb3fb902" />
 
 
 Feature Flags
 The demo provides several feature flags that you can use to simulate different scenarios. https://opentelemetry.io/docs/demo/feature-flags/
 Flag values are stored in the src/flagd/demo.flagd.json file. To enable a flag, change the defaultVariant value in the config file for a given flag to “on”.
+<img width="416" alt="image" src="https://github.com/user-attachments/assets/29c1647f-0ea2-43ac-a17e-7e4806a93c29" />
 
 
 View and Analyse with the Jaeger UI
 With the adServcieFailure feature flag enabled, let’s see how we can use **Jaeger** to diagnose the issue to determine the root cause. ****Remember, that the service will generate an error for GetAds 1/10th of the time.
-Jaeger is usually the first tool you get in contact with when you start getting into the world of Distributed Tracing. With Jaeger, we can visualise the whole chain of events. With this visibility we can easier isolate the problem when something goes wrong.
+**Jaeger** is usually the first tool you get in contact with when you start getting into the world of Distributed Tracing. With Jaeger, we can visualise the whole chain of events. With this visibility we can easier isolate the problem when something goes wrong.
+<img width="414" alt="image" src="https://github.com/user-attachments/assets/e46153de-9881-4b7f-8f66-066b18f19e77" />
+
 
 Metrics on Grafana
+<img width="416" alt="image" src="https://github.com/user-attachments/assets/cdc19878-5634-47fe-b81b-08cc7d793322" />
+<img width="415" alt="image" src="https://github.com/user-attachments/assets/593536c1-ea38-436f-9c64-67045c98c3a3" />
+
 
 By following these steps, you can set up and explore an observability demo environment using OpenTelemetry and Docker. This setup will help you understand the intricacies of distributed tracing and how to monitor and diagnose issues in microservices-based applications.
