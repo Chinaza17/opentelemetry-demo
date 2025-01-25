@@ -1,4 +1,4 @@
-**Otel Astronomy Shop Demo App**
+****Otel Astronomy Shop Demo App****
 
 **Step by Step Tutorial for this Project:**
 
