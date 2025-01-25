@@ -8,6 +8,8 @@ OpenTelemetry is an open-source project designed to provide a unified standard f
 
 OpenTelemetry is the Second best Project in CNCF Landscape after Kubernetes!
 
+<img width="416" alt="image" src="https://github.com/user-attachments/assets/45312936-4655-4645-8ab6-c2d43ceae885" />
+
 Architecture Diagram
 https://opentelemetry.io/docs/demo/architecture/
 Prerequisites:
