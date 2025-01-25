@@ -1,7 +1,11 @@
-Otel Astronomy Shop Demo App
-Step by Step Tutorial for this Project:
-What is Open Telemetry (OTel)?
+**Otel Astronomy Shop Demo App**
+
+**Step by Step Tutorial for this Project:**
+
+**What is Open Telemetry (OTel)?**
+
 OpenTelemetry is an open-source project designed to provide a unified standard for collecting and managing telemetry data from software applications, including traces, metrics, and logs. It helps in observing and understanding the behavior of applications and systems by offering a set of APIs, libraries, and agents for instrumenting code and exporting telemetry data.
+
 OpenTelemetry is the Second best Project in CNCF Landscape after Kubernetes!
 
 Architecture Diagram
